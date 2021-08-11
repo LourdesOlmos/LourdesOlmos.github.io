@@ -10,6 +10,11 @@ urlpatterns = [
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('core.api.urls')),
+    path(r'^service-worker.js', TemplateView.as_view(
+    template_name="service-worker.js",
+    content_type='application/javascript',
+    )),
+    re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
 ]
 
 if settings.DEBUG:
