@@ -48,5 +48,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "homepage": "http://LourdesOlmos.github.io/LourdesOlmos.github.io",
+        "scripts": {
+        "deploy": "gh-pages -d build",
+        "predeploy": "npm run build"
+    }
 }
